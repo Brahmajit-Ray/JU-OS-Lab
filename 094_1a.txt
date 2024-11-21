@@ -1,0 +1,178 @@
+//Brahmajit Ray,UG3-002211001094
+
+/* Solution Assignment 1A
+
+1) who:-It displays the information about all the users who have logged into the system currently
+
+[be2294@localhost ~]$ who
+(unknown) :0           2023-10-30 11:07 (:0)
+be2284   pts/0        2024-07-29 12:20 (172.16.4.139)
+root     pts/1        2024-07-29 11:39 (172.16.5.159)
+be2298   pts/2        2024-07-29 11:57 (172.16.4.142)
+be22L06  pts/3        2024-07-29 11:57 (172.16.4.144)
+be22105  pts/4        2024-07-29 12:14 (172.16.4.133)
+be2288   pts/5        2024-07-29 11:58 (172.16.4.140)
+be2297   pts/6        2024-07-29 11:58 (172.16.4.160)
+be22103  pts/7        2024-07-29 12:05 (172.16.4.155)
+be2276   pts/8        2024-07-29 11:59 (172.16.4.137)
+be22100  pts/9        2024-07-29 12:00 (172.16.4.158)
+be22L04  pts/10       2024-07-29 11:50 (172.16.4.216)
+be22108  pts/11       2024-07-29 12:01 (172.16.4.159)
+be22L04  pts/12       2024-07-29 12:21 (172.16.4.161)
+be2296   pts/13       2024-07-29 12:04 (172.16.4.176)
+be2294   pts/14       2024-07-29 12:05 (172.16.4.153)
+be22104  pts/15       2024-07-29 12:06 (172.16.4.135)
+be22109  pts/17       2024-07-29 12:06 (172.16.4.148)
+be2289   pts/19       2024-07-29 12:07 (172.16.4.147)
+be2286   pts/20       2024-07-29 12:09 (172.16.4.129)
+be2279   pts/21       2024-07-29 12:09 (172.16.4.145)
+be2292   pts/22       2024-07-29 12:10 (172.16.4.146)
+be2295   pts/23       2024-07-29 12:12 (172.16.4.136)
+be2279   pts/24       2024-07-29 12:13 (172.16.4.145)
+be22106  pts/25       2024-07-29 12:18 (172.16.4.162)
+be2298   pts/26       2024-07-29 12:16 (172.16.4.143)
+
+2) whoami:- It displays Current username, Terminal number, date and time at which user logged into the system
+
+[be2294@localhost ~]$ whoami
+be2294
+
+3) pwd:- It displays current working directory
+
+[be2294@localhost ~]$ pwd
+/home/usr/student/ug/yr22/be2294
+
+4) date:- It displays system date and time
+
+[be2294@localhost ~]$ date
+Mon Jul 29 12:39:15 IST 2024
+
+5) ls - It lists the files and directories stored in the current directory.
+
+[be2294@localhost ~]$ ls
+a.out  CN_Lab  CPNM_Lab  DSA_Lab  OOP_Lab  OOS_Lab  SE_Lab  skel
+
+6) mkdir- It is used to create directories by using the command
+
+[be2294@localhost ~]$ mkdir Lab
+[be2294@localhost ~]$ ls
+a.out  CN_Lab  CPNM_Lab  DSA_Lab  Lab  OOP_Lab  OOS_Lab  SE_Lab  skel
+
+7) clear- It clears the screen
+
+[be2294@localhost ~]$ clear
+
+8) cd - It is used to change the current working directory to any other directory specified
+
+[be2294@localhost ~]$ cd Lab
+[be2294@localhost Lab]$ pwd
+/home/usr/student/ug/yr22/be2294/Lab
+
+9)cd.. -This command is used to come out from the current working directory.
+
+[be2294@localhost Lab]$ pwd
+/home/usr/student/ug/yr22/be2294/Lab
+[be2294@localhost Lab]$ cd ..
+[be2294@localhost ~]$ pwd
+/home/usr/student/ug/yr22/be2294
+
+10)rmdir - Directories can be deleted using the rmdir command
+
+[be2294@localhost ~]$ rmdir Lab
+[be2294@localhost ~]$ ls
+a.out  CN_Lab  CPNM_Lab  DSA_Lab  OOP_Lab  OOS_Lab  SE_Lab  skel
+
+11) cat- It displays the contents of a file
+
+[be2294@localhost ~]$ cat test
+Hello
+Good Morning
+
+12) cp - It is used to copy a file
+
+[be2294@localhost ~]$ cp test test1
+[be2294@localhost ~]$ ls
+a.out  CN_Lab  CPNM_Lab  DSA_Lab  OOP_Lab  OOS_Lab  SE_Lab  skel  test  test1  test2
+[be2294@localhost ~]$ cat test1
+Hello
+Good Morning
+
+13)mv- It is used to change the name of a file
+
+[be2294@localhost ~]$ mv test1 test2
+[be2294@localhost ~]$ ls
+a.out  CN_Lab  CPNM_Lab  DSA_Lab  OOP_Lab  OOS_Lab  SE_Lab  skel  test  test2
+[be2294@localhost ~]$ cat test2
+Hello
+Good Morning
+
+14)rm- It is used to delete an existing file
+
+[be2294@localhost ~]$ rm test2
+[be2294@localhost ~]$ ls
+a.out  CN_Lab  CPNM_Lab  DSA_Lab  OOP_Lab  OOS_Lab  SE_Lab  skel  test
+
+15) stat- It is used to display file or file system status
+
+[be2294@localhost ~]$ stat test
+  File: âstâ Size: 19              Blocks: 8          IO Block: 4096   regular file
+Device: fd02h/64770d    Inode: 2699365414  Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 3077/  be2294)   Gid: ( 2924/  ugyr22)
+Context: unconfined_u:object_r:user_home_t:s0
+Access: 2024-07-29 12:08:02.952397928 +0530
+Modify: 2024-07-29 12:07:39.919397631 +0530
+Change: 2024-07-29 12:07:39.919397631 +0530
+ Birth: -
+
+16)stty- Change and print terminal line settings.
+
+[be2294@localhost ~]$ stty
+speed 38400 baud; line = 0;
+-brkint -imaxbel
+
+17) tty- It prints the filename of the terminal connected to standard input.
+
+[be2294@localhost ~]$ tty
+/dev/pts/14
+
+18)uname-It prints system information
+
+[be2294@localhost ~]$ uname
+Linux
+
+19)umask- It specifies user file creation mask, implying which of the 3 permissions are to be denied to the owner,group and others.
+
+[be2294@localhost ~]$ umask
+0022
+
+20)find- It searches for files in a directory hierarchy
+
+[be2294@localhost ~]$ find test
+test
+[be2294@localhost ~]$ find test4
+find: âst4âNo such file or directory
+
+21) sort- It sorts the lines of text files
+
+[be2294@localhost ~]$ cat test
+Hello
+Good Morning
+[be2294@localhost ~]$ sort test
+Good Morning
+Hello
+
+22) ps - It displays information about the current processes.
+
+[be2294@localhost ~]$ ps
+  PID TTY          TIME CMD
+ 7735 pts/14   00:00:00 bash
+14845 pts/14   00:00:00 ps
+
+23) chmod 777 file1 - gives full permission to owner, group and others
+
+[be2294@localhost ~]$ chmod 777 test
+
+24)chmod o-w file1 - Removes write permission for others.
+
+[be2294@localhost ~]$ chmod o-w test
+
